@@ -1,3 +1,3 @@
-import { randomSuperhero } from "superheroes";
+import x from "@inquirer/prompts";
 
-console.log(`I am ${randomSuperhero()}`);
+console.log(x);
