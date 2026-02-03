@@ -1,15 +1,17 @@
-<section>
+<!DOCTYPE html>
+<html>
 
-    <h1>Welcome to Our Website</h1>
-    <p>This is the homepage of our awesome website. Explore our content and enjoy your stay!</p>
+<head>
+  <title>Secrets</title>
+</head>
 
-    <form action="/generate" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-       <label for="tag">tag:</label>
-        <input type="text" id="tag" name="tag" required>
-        
-        <button type="submit">Generate</button>
-    </form>
-</section>
+<body>
+  <h1>Secrets</h1>
+  <form action="/check" method="POST">
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" required>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>
