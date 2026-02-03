@@ -7,7 +7,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3311;
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan("tiny"));
+
+const logger = (req, res, next) => {
+  console.log(`${req.method} : ${req.url} - ${new Date().toISOString()}`);
+  next();
+};
+
+app.use(logger);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
